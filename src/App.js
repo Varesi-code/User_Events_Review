@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import FormApp from "./components/Form/Form.js"
+import { AppContainer, MainTitle, MainWrapper } from "./styles/App.styled.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends React.Component{
+  render(){
+    return(
+      <AppContainer>
+        <MainWrapper>
+          <MainTitle>Events &#38; Event Handlers</MainTitle>
+          <FormApp/>
+        </MainWrapper>
+      </AppContainer>
+    )
+  };
+};
 
 export default App;
