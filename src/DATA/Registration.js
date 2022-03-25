@@ -1,4 +1,4 @@
-const users = [
+const data = [
   {
     username: "Kike",
     email: "kike@gmail.com",
