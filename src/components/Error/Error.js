@@ -8,7 +8,7 @@ class Error extends React.Component{
             <Wrapper>
                 <Parragraph>User was not found</Parragraph>
                 <Parragraph>Please, check the information</Parragraph>
-                <SubmitBtn> Go Back </SubmitBtn>
+                <SubmitBtn onClick={()=> this.props.fn()}> Go Back </SubmitBtn>
             </Wrapper>
         )
     }
