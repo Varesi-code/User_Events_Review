@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Review of User Events & Event handlers.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Instructions
 
-### `npm start`
+1. Download the files, or clone the repo on your local machine.
+2. Run npm install to get the packages on your local repo.
+3. run npm start on your terminal in the folder that holds the files to this project.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Our Goal for this lesson:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. We must create the styles for our components. For this project, we will be using React's library Styled Component.
+    In case it had not been installed with npm install, then run the command npm install --save styled-components
+2. We must be sure that we get the values input by users in the input tags. These values, must be processed in order to avoid errors from the user-end, and then evaluated against the information that we have go stored in our Database, so that we can grant ot deny access.
+3. Our Project contains other child-components whose render will depend on the moments of our evaluation process.
+   Eg.
+   - A loading component should be rendered once the request is being made. It should go away, though, once the request has been fullfiled either positively or negatively.
+   - In case of positively, a Success Component should be rendered in our screen to let users know their request has been successful.
+   - In case of negatively, an Error component should be rendered in our screen to let users know their request has been resulted in an error.
+   
+4. We must create all the logic behind the events to be able to move from one component on to another. We must also evaluate whenever props are needed, the type of props, and how to handler any possible propr drilling problem.  
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+WE'RE GONNA DO GREAT! :)
