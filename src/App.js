@@ -1,18 +1,41 @@
 import React from 'react';
-import FormApp from "./components/Form/Form.js"
 import { AppContainer, MainTitle, MainWrapper } from "./styles/App.styled.js";
 
+import InputTask from './Tuesday/InputTask.js';
+import TaskCards from './Tuesday/TaskCards.js';
+
 class App extends React.Component{
+  constructor(){
+    super()
+    this.state= ({
+      tasks: []
+    })
+    this.handlerValues = this.handlerValues.bind(this)
+  };
+
+  handlerValues( paramValue ){
+    this.setState({tasks: [...this.state.tasks, paramValue]})
+  }
+
   render(){
+    let objTasks = this.state.tasks?.map((task, index)=> ({ id: index, tasks: task}));
     return(
-      <AppContainer>
+      <AppContainer>  
         <MainWrapper>
-          <MainTitle>Events &#38; Event Handlers</MainTitle>
-          <FormApp/>
+          <MainTitle>Review Making a TODO List</MainTitle>
+            <InputTask taskFn={this.handlerValues}/>
+            {
+              objTasks?.map(task=>
+                <TaskCards
+                  key={task.id}
+                  task={task.tasks}
+                />
+              )
+            }
         </MainWrapper>
       </AppContainer>
     )
   };
 };
-
+//this is a change
 export default App;
