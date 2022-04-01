@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 export const AppContainer = styled.div`
     width: 100%;
-    height: 100vh;
-    background-image: url("https://img.freepik.com/vector-gratis/paisaje-montana-degradado_23-2149152829.jpg?t=st=1648096983~exp=1648097583~hmac=0e425528dfab1b15e11e15e58b0de7ea907493118d688ba46ba5bec872e0f37e&w=900");
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100%;
+    background-color: rgb(36, 40, 47);
+    overflow: hidden;
 `;
 
 export const MainTitle = styled.h1`
@@ -15,10 +14,22 @@ export const MainTitle = styled.h1`
     margin: 25px;
 `;
 
-export const MainWrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
+export const HeaderWrapper = styled.div`
+   width: 100%;
+   height: 50vh;
+   background-color: white;
+   overflow: hidden;
 `;
+
+export const CardsContainer = {
+    "marginTop":"30px",
+    "width":"100%",
+    "display": "flex",
+    "justifyContent": "center",
+    "flexWrap": "wrap"
+}
+
+export const LoadingStyle = {
+    "alignItems": "center",
+    "color": "white"
+}

@@ -1,40 +1,19 @@
-import React from 'react';
-import { AppContainer, MainTitle, MainWrapper } from "./styles/App.styled.js";
+import React, {Component} from "react";
+import styled from "styled-components";
+const Pokedex = "https://i.etsystatic.com/11279093/r/il/d6ac58/1799315681/il_570xN.1799315681_ii1x.jpg";
+const PokeDefault = "https://assets.pokemon.com/static2/_ui/img/og-default-image.jpeg";
 
-import InputTask from './Tuesday/InputTask.js';
-import TaskCards from './Tuesday/TaskCards.js';
+class App extends Component{
+    
+    render(){
+        return(
+            <div>
+                <div>
+                    <h1>App</h1>
+                </div>
+            </div>
+        )
+    }
+}
 
-class App extends React.Component{
-  constructor(){
-    super()
-    this.state= ({
-      tasks: []
-    })
-    this.handlerValues = this.handlerValues.bind(this)
-  };
-
-  handlerValues( paramValue ){
-    this.setState({tasks: [...this.state.tasks, paramValue]})
-  }
-
-  render(){
-    let objTasks = this.state.tasks?.map((task, index)=> ({ id: index, tasks: task}));
-    return(
-      <AppContainer>  
-        <MainWrapper>
-          <MainTitle>Review Making a TODO List</MainTitle>
-            <InputTask taskFn={this.handlerValues}/>
-            {
-              objTasks?.map(task=>
-                <TaskCards
-                  key={task.id}
-                  task={task.tasks}
-                />
-              )
-            }
-        </MainWrapper>
-      </AppContainer>
-    )
-  };
-};
 export default App;
